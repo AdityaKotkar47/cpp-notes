@@ -39,3 +39,4 @@ for (data_type variable : collection_name) {
 9. in nested loops, variables declared by outer loop is only accessible to it and inner loop only
 10. use `break` to exit a loop prematurely and use `continue` to skip specific iterations
 11. in nested loops, `break` and `continue` affect the current loop where it's placed
+12. `0`, `0.0`, `' '`, `'\0'`, `nullptr` will be considered as false when typecasted to booleans [such as in conditional statements]

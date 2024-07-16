@@ -71,3 +71,4 @@ std::cout << *(ptr - 1) << std::endl; // Assuming ptr is not the first element, 
     - this allows the function to modify the original array content
     - the array decays into a constant pointer that points to the first element's memory address
     - pass the size explicitly
+14. pointers store memory addresses and use `*` for dereferencing, whereas references are aliases for existing variables and don't use `&` because they directly refer to the memory location

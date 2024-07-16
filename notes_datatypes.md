@@ -29,4 +29,6 @@ precedence decreasing order =
 11. arithmetic operations are not possible for datatypes with size less than 4 bytes, they'll be implicitly converted to integers if arithmetic operations are attempted
 12. `const` can only be assigned a value once which is at the time of initialization\
 syntax- `const data_type var_name;` [keep the var_name in uppercase]
-13. `size_t` is just an alias of `unsigned int`
+13. `size_t` is just an alias of `unsigned int` and should be preferred to keep track of stuff [counts]
+14. declaration: informs the compiler about the existence and type of a variable/function\
+initialization: assigns a specific value to a previously declared variable
