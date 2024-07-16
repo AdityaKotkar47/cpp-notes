@@ -1,26 +1,20 @@
-1. functions from `<cctype>` -
-    - `std::isalnum` - checks if character is alphanumeric\
-    *parameter* - character\
-    *return value* - non-zero value if the character is an alphanumeric character, 0 otherwise
-    - `std::isalpha` - checks if the given character is an alphabetic character\
-    *parameter* - character\
-    *return value* - non-zero value if the character is an alphabetic character, 0 otherwise
-    - `std::isblank` - checks if character is a blank character\
-    *parameter* - character\
-    *return value* - non-zero value if the character is a blank character, 0 otherwise
-    - `std::islower` - checks if character is a lowercase character\
-    *parameter* - character\
-    *return value* - non-zero value if the character is a lowercase character, 0 otherwise
-    - `std::isupper` - checks if character is a uppercase character\
-    *parameter* - character\
-    *return value* - non-zero value if the character is an uppercase character, 0 otherwise
-    - `std::isdigit` - checks if character is a digit\
-    *parameter* - character\
-    *return value* - non-zero value if the character is a numeric character, 0 otherwise
-    - `std::tolower` - converts a character to lowercase\
-    *parameter* - character\
-    *return value* - lowercase version of character or unmodified character if no lowercase version
-    - `std::toupper` - converts a character to uppercase\
-    *parameter* - character\
-    *return value* - uppercase version of character or unmodified character if no uppercase version
+1. `std::string` is safer and more convenient than C-strings due to automatic memory management [you can change the text as much as you like without worrying about memory space],\
+bounds checking [it prevents you from accidentally accessing parts of the text that don't exist, avoiding crashes],\
+and rich functionality [offers built-in tools for common text operations, making text manipulation easy and efficient]
 
+2. declaration and initialisation -
+    ```cpp
+    std::string name; // Declares an empty string
+
+    std::string greeting = "Hello"; // Initializes with a string literal, braces can be used too, parantheses can be used too
+
+    const char* c_str = "World";
+    std::string message(c_str); // Initializes from an existing C-string or std::string, braces can be used too
+
+    std::string initial(10, 'C'); // Initialize with multiple copies of a char, braces can be used too
+
+    std::string message {"Hello there", 5}; // Initialize with part of a string literal, parantheses can be used too
+
+    std::string greeting{"Hello World"};
+    std::string saying_hello{greeting, 6, 5}; // Initialize with part of an existing string, starting at index 6, taking 5 characters, parantheses can be used too
+    ```
