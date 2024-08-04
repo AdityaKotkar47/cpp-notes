@@ -114,3 +114,21 @@ over time, leaks can consume memory resources, leading to reduced performance or
     p_salaries = nullptr;
     ```
     - pointers initialized with dynamic arrays are different from arrays as they have decayed into a pointer [lost all info except the address to the first element], `std::size` doesn't work on them, and they don't support range-based for loops
+    - example
+    ```cpp
+    int n;
+    cin >> n;
+
+    int* DynamicArray;
+    DynamicArray = new int[n];
+
+    for (size_t i = 0; i < n; i++) {
+      std::cin >> DynamicArray[i];
+    }
+
+    for (size_t i = 0; i < n; i++) {
+      std::cout << DynamicArray[i] << std::endl;
+    }
+
+    delete[] DynamicArray;
+    ```
